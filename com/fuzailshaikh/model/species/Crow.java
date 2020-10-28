@@ -6,18 +6,18 @@ import com.fuzailshaikh.model.interfaces.MakesSound;
 
 public class Crow extends Bird implements HasLegs, MakesSound {
 
-    public Crow(String name) {
-        super(name);
-    }
+	public Crow(String name) {
+		super(name);
+	}
 
-    @Override
-    public int legCount() {
-        return 2;
-    }
+	@Override
+	public int legCount() {
+		return 2;
+	}
 
-    @Override
-    public String sound() {
-        return "Caw";
-    }
-    
+	@Override
+	public String sound() {
+		return "Caw";
+	}
+
 }

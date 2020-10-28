@@ -5,13 +5,13 @@ import com.fuzailshaikh.model.interfaces.HasLegs;
 
 public class Scorpio extends Animal implements HasLegs {
 
-    public Scorpio(String name) {
-        super(name);
-    }
+	public Scorpio(String name) {
+		super(name);
+	}
 
-    @Override
-    public int legCount() {
-        return 8;
-    }
-    
+	@Override
+	public int legCount() {
+		return 8;
+	}
+
 }

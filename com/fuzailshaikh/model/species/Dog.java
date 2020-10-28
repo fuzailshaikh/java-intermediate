@@ -6,18 +6,18 @@ import com.fuzailshaikh.model.interfaces.MakesSound;
 
 public class Dog extends Mammal implements HasLegs, MakesSound {
 
-    public Dog(String name) {
-        super(name);
-    }
+	public Dog(String name) {
+		super(name);
+	}
 
-    @Override
-    public int legCount() {
-        return 4;
-    }
+	@Override
+	public int legCount() {
+		return 4;
+	}
 
-    @Override
-    public String sound() {
-        return "bark";
-    }
-    
+	@Override
+	public String sound() {
+		return "bark";
+	}
+
 }
