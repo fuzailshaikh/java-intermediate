@@ -14,6 +14,8 @@ public class Cage {
 
 	public Cage(Builder builder) {
 		animals = new ArrayList<>();
+		capacity = builder.capacity;
+		cleanSchedule = builder.cleanSchedule;
 	}
 
 	public void addAnimal(Animal a) throws InsufficientCapacityException {
@@ -28,6 +30,10 @@ public class Cage {
 		for (Animal animal : animals) {
 			addAnimal(animal);
 		}
+	}
+
+	public List<Animal> getAnimals() {
+		return animals;
 	}
 
 	public static class Builder {

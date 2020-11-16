@@ -1,5 +1,7 @@
 package com.fuzailshaikh;
 
+import java.util.List;
+
 import com.fuzailshaikh.exceptions.InsufficientCapacityException;
 import com.fuzailshaikh.model.categories.Animal;
 import com.fuzailshaikh.model.enums.CleanSchedule;
@@ -10,8 +12,7 @@ import com.fuzailshaikh.model.species.Scorpio;
 
 public class Zoo {
 	public static void main(String[] args) {
-		Cage shed = Cage.Builder.newInstance().setCapacity(1).setCleanSchedule(CleanSchedule.WEEKLY).build();
-
+		Cage shed = Cage.Builder.newInstance().setCapacity(3).setCleanSchedule(CleanSchedule.WEEKLY).build();
 		Cage smallBox = Cage.Builder.newInstance().setCapacity(1).setCleanSchedule(CleanSchedule.DAILY).build();
 
 		Dog bruno = new Dog("Bruno");
@@ -43,6 +44,9 @@ public class Zoo {
 		} catch (InsufficientCapacityException e) {
 			System.err.println("We don't have place for scorpios here anymore");
 		}
+
+		Vet mark = new Vet();
+		mark.vaccinateAnimalsFromCage(List.of(shed, smallBox));
 	}
 
 }
